@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<fx:root id="AnchorPane" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.66" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane fx:id="idTitledPane" text="Port x LEDs" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <RadioButton fx:id="radioB8" mnemonicParsing="false" />
+                        <RadioButton fx:id="radioB7" mnemonicParsing="false" />
+                        <RadioButton fx:id="radioB6" mnemonicParsing="false" />
+                        <RadioButton fx:id="radioB5" mnemonicParsing="false" />
+                        <RadioButton fx:id="radioB4" mnemonicParsing="false" />
+                        <RadioButton fx:id="radioB3" mnemonicParsing="false" />
+                        <RadioButton fx:id="radioB2" mnemonicParsing="false" />
+                        <RadioButton fx:id="radioB1" mnemonicParsing="false" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </children>
+</fx:root>
