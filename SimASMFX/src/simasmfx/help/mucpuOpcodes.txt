@@ -1,0 +1,34 @@
+Opcode    ASM
+00 00    NOP 00
+10 k     LOD A,[k]
+11 k     STO [k],A
+20 k     ADD A,[k]
+21 k     SUB A,[k]
+22 k     ADC A,[k]
+30 k     JMP k
+31 k     JZ  k
+32 k     JNZ k
+33 k     JC  k
+34 k     JNC k
+A0 p     IN  A,p
+A1 p     OUT p,A
+B0 k     CALL k
+B1 00    RET
+B2 00    PUSH SR
+B2 01    PUSH A
+B3 00    POP SR
+B3 01    POP A
+FF FF    HLT FF
+
+All values are hex
+k is an 8 bit address
+p is a port number
+A is the A register
+SR is the status register
+Output ports:
+  00 LEDs
+  01 LEDs
+  04 LCD
+Input ports:
+  02 DIP switches
+  03 DIP switches

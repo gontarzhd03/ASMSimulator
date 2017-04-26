@@ -1,0 +1,34 @@
+This program simulates a one register 8-bit microcontroller based on the Mansfield University Computer Organization MUCPU.
+
+The simulated CPU has 1 general purpose 8-bit register named A (the accumulator). There is a single 256 byte memory address space. The address space runs from 0x00 to 0xFF and contains both code and data. Memory is accessed via indirect addressing. There are 20 different instructions supported.
+
+Each instruction consists of two bytes. The first byte is a hex number that identifies the instruction. The second byte is a hex number that is either the address of a memory location or a port number or a push/pop register.
+
+For example, LOD A,[10] would load the value stored at memory address 10 (hex) into register A.
+
+Here is an example program that demonstrates writing subroutines:
+
+#test delay program
+start:	lod a, [n1]
+loop1:	call disp
+	add a, [n2]
+	push a
+	lod a, [n3]
+	call delay
+	pop a
+	jmp loop1
+	hlt
+n1:	db 00
+n2:	db 01
+n3:	db 0A
+
+#sub display
+disp:	out 00, a
+	ret
+
+#sub delay
+#call with delay value in A
+delay:	sub a, [dn1]
+	jnz delay
+	ret
+dn1:	db 01

@@ -1,0 +1,8 @@
+#a9n1 by Hank Gontarz
+	LOD A, [NUM1]
+LOOP1:	SUB A, [NUM2]
+	OUT 00
+	JNZ LOOP1
+	HLT
+NUM1:	DB  00
+NUM2:	DB  01

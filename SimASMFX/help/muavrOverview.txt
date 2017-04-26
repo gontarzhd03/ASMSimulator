@@ -1,0 +1,11 @@
+This program simulates an 8-bit microcontroller that is similar to a simplified version of the Atmel 8-bit AVR microcontrollers such as the ATMega 328P used on the Arduino board. 
+
+The simulated CPU has 8 general purpose 8-bit registers named R0 to R7. Direct and register-indirect addressing is supported by all registers. There is a single 256 byte memory address space that is separate from the registers. The address space runs from 0x00 to 0xFF and contains both code and data. There are 30 different instructions supported with a total of 907 variations.
+
+Each instruction consists of two bytes. The first byte is a hex number that identifies the instruction. The second byte is a hex number that can identify registers, a port, or a number.
+
+Rd is the destination register and Rr is the source register. K indicates an 8-bit data or address value. P indicates one of the 5 available ports on the simulator.  
+
+For many instructions a register is identified by a 4 bit pattern. Therefore 2 registers can be stored in a byte. For example, to add together R2 and R7 and to store the result in R2, the assembly code would be ADD R2,R7 and the machine code would be 04 27 where the 04 is the opcode for ADD and 27 indicates R2 and R7.
+
+Jump, call, and branch instructions all use an absolute address. For example, suppose a subroutine named MySub is located at address 60. CALL MySub would then go to address 60. The opcode would be 44 60.

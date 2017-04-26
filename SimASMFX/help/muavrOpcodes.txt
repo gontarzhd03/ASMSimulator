@@ -1,0 +1,52 @@
+Opcode    ASM
+00 00    NOP 00
+04 RdRr  ADD Rd, Rr
+08 RdRr  ADC Rd, Rr
+14 RdRr  SUB Rd, Rr
+20 RdRr  AND Rd, Rr
+24 RdRr  OR  Rd, Rr
+28 RdRr  EOR Rd, Rr
+30 0Rd   INC Rd
+31 0Rd   DEC Rd
+32 0Rd   TST Rd
+40 K     JMP K
+44 K     CALL K
+48 00    RET 00
+50 RdRr  CP Rd, Rr
+60 K     BREQ K
+61 K     BRNE K
+62 K     BRCS K
+63 K     BRCC K
+64 K     BRSH K
+65 K     BRLO K
+6F K     MOV Rd, Rr
+70 K     LDI R0, K
+71 K     LDI R1, K
+72 K     LDI R2, K
+73 K     LDI R3, K
+74 K     LDI R4, K
+75 K     LDI R5, K
+76 K     LDI R6, K
+77 K     LDI R7, K
+90 RdRr  LD Rd, Rr
+91 RdRr  LD Rd, Rr+
+94 RdRr  ST Rd, Rr
+95 RdRr  ST Rd+, Rr
+A0 RdP   IN Rd, P
+A1 PRd   OUT P, Rr
+A2 Rr    PUSH Rr
+A3 Rd    POP Rd
+FF FF    HLT FF
+
+All values are hex
+K is an 8 bit address or data value
+P is a port number
+Rd is the destination register
+Rr is the source register
+Output ports:
+  00 LEDs
+  01 LEDs
+  04 LCD
+Input ports:
+  02 DIP switches
+  03 DIP switches
