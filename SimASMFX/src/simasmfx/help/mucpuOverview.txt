@@ -1,6 +1,6 @@
-This program simulates a one register 8-bit microcontroller based on the Mansfield University Computer Organization MUCPU.
+This program simulates an 8-bit microcontroller based on the Mansfield University Computer Organization MUCPU.
 
-The simulated CPU has 1 general purpose 8-bit register named A (the accumulator). There is a single 256 byte memory address space. The address space runs from 0x00 to 0xFF and contains both code and data. Memory is accessed via indirect addressing. There are 20 different instructions supported.
+The simulated CPU has 4 general purpose 8-bit registers named A through D (A is the accumulator). There is a single 256 byte memory address space. The address space runs from 0x00 to 0xFF and contains both code and data. Memory is accessed via indirect addressing. There are 20 different instructions supported.
 
 Each instruction consists of two bytes. The first byte is a hex number that identifies the instruction. The second byte is a hex number that is either the address of a memory location or a port number or a push/pop register.
 

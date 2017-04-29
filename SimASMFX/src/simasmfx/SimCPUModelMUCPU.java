@@ -206,8 +206,8 @@ public class SimCPUModelMUCPU implements SimCPUModel {
     
     //#########################################################################
     //# toString - The essential cpu registers as a String
-    //# Instruction pointer, Program counter, Address register, Status register, Stack pointer
-    //#   Stack pointer, General purpose registers
+    //# Program counter or instruction pointer, Instruction register, Address register,
+    //# Status register, Stack pointer, General purpose registers
     //#########################################################################
     @Override
     public String toString() {
