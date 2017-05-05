@@ -1,0 +1,17 @@
+#Count down from 9 to 0 and show ! on LCD screen.
+	LOD A, [NUM1]
+LOOP1:	SUB A, [NUM2]
+	PUSH A
+	PUSH SR
+	ADD A, [ZERO]
+	OUT 04, A
+	POP SR
+	POP A
+	JNZ LOOP1
+	LOD A, [EXCLAM]
+	OUT 04, A
+	HLT
+NUM1:	DB  0A
+NUM2:	DB  01
+ZERO:	DB  30
+EXCLAM:	DB  21
